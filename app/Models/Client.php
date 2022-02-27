@@ -10,7 +10,7 @@ class Client extends Model
 
     protected $table = 'clients';
     public $timestamps = true;
-    protected $fillable = array('name', 'email', 'phone', 'password', 'd_o_b', 'last_donation_date', 'blood_type_id', 'city_id');
+    protected $fillable = array('name', 'email', 'phone', 'password', 'd_o_b', 'last_donation_date', 'blood_type_id', 'city_id', 'pin_code');
     protected $hidden = [
         'password', 'api_token',
     ];
@@ -37,12 +37,27 @@ class Client extends Model
 
     public function bloodType()
     {
-        return $this->hasMany('App\Models\BloodType');
+        return $this->belongsTo('App\Models\BloodType');
     }
 
     public function governorates()
     {
         return $this->belongsToMany('App\Models\Governorate');
+    }
+
+    public function governorate()
+    {
+        return $this->belongsTo('App\Models\Governorate');
+    }
+
+    public function requests()
+    {
+        return $this->hasMany('App\Models\DonationRequest');
+    }
+
+    public function tokens()
+    {
+        return $this->hasMany('App\Models\Token');
     }
 
 }
