@@ -13,7 +13,7 @@ use App\Http\Controllers\SettingController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DonationController;
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\front\AuthController;
+use App\Http\Controllers\Front\AuthController;
 use App\Http\Controllers\Front\MainController;
 use App\Http\Controllers\GovernorateController;
 
