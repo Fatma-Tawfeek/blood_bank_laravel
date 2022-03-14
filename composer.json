@@ -43,7 +43,7 @@
             "Database\\Seeders\\": "database/seeders/"
         },
         "files": [
-            "App/fatma/helpers.php"
+            "app/fatma/helpers.php"
         ]
     },
     "autoload-dev": {
