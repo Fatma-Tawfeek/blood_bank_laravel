@@ -16,7 +16,7 @@ class SettingController extends Controller
      */
     public function edit()
     {
-        $record = Setting::first();
+        $record = Setting::all();
 
         return view('settings.edit', compact('record'));
     }
@@ -31,7 +31,7 @@ class SettingController extends Controller
     public function update(Request $request)
     {
 
-        $record = Setting::first();
+        $record = Setting::all();
         $record->update($request->all());
         flash()->success('Settings have been updated Successfully!');
         return back();
