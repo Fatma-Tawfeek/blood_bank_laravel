@@ -28,15 +28,7 @@ class AppServiceProvider extends ServiceProvider
             \URL::forceScheme('https');
         }
 
-        $settings = (object)[
-            'email' => 'kkkkkkk',
-            'phone' => '123456789',
-            'fb_link' => 'kkkkkkkkkk',
-            'tw_link' => 'kkkkkkkkkk',
-            'insta_link' => 'kkkkkkkkkk',
-            'yt_link' => 'kkkkkkkkkk',
-            'about_app' => 'kkkkkkkkkk'
-        ];
+        $settings = Setting::first();
         view()->share(compact('settings'));
     }
 }
