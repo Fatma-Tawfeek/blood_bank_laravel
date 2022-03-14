@@ -3,14 +3,14 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
 
-class Client extends Model
+class Client extends Authenticatable
 {
-
     protected $table = 'clients';
     public $timestamps = true;
-    protected $fillable = array('name', 'email', 'phone', 'password', 'd_o_b', 'last_donation_date', 'blood_type_id', 'city_id', 'pin_code');
+    protected $fillable = array('name', 'email', 'phone', 'password', 'd_o_b', 'last_donation_date', 'blood_type_id', 'city_id', 'pin_code', 'status');
     protected $hidden = [
         'password', 'api_token',
     ];

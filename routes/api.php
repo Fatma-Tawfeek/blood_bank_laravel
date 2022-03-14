@@ -43,5 +43,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Api'], function () {
         route::get('get-notification-settings', [AuthController::class, 'getNotificationSettings']);
         route::post('notification-settings', [AuthController::class, 'notificationSettings']);
         route::post('donation-request-create', [MainController::class, 'donationRequestCreate']);
+        route::get('donation-requests', [MainController::class, 'donationRequests']);
+        route::get('donation-request', [MainController::class, 'donationRequest']);
     });
 });

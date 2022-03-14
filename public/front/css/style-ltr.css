@@ -1,0 +1,409 @@
+                /*--------------------------------public settings--------------------------------------*/
+
+/*upper-bar*/
+.upper-bar .info, .upper-bar .accounts{
+    justify-content: flex-end;
+}
+
+/*navbar*/
+.nav-bar .navbar .navbar-brand{
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.nav-bar .navbar ul li{
+    margin-left: 0;
+    margin-right: 2px;
+}
+
+.nav-bar .navbar ul li a{
+    border-left: none;
+    border-right: 1px solid #f0f0f0;
+}
+
+.nav-bar .donate{
+    padding-right: 0;
+    padding-left: 30px;
+}
+
+.nav-bar .donate p{
+    font-size: 18px;
+}
+
+.nav-bar .donate img{
+    right: auto;
+    left: 5px;
+}
+
+
+/*footer*/
+.footer .other .social .icons a{
+    margin-left: 0;
+    margin-right: 20px;
+}
+
+.footer .pages .list-group{
+    font-size: 18px;
+}
+
+.footer .stores p,
+.footer .other .rights p{
+    font-size: 18px;
+}
+
+.upper-bar .accounts .create-new,
+.upper-bar .accounts .signin{
+    font-weight: 600;
+}
+
+.upper-bar .accounts .create-new{
+    margin: 0;
+}
+
+.upper-bar .accounts .signin{
+    
+    margin-left: 30px;
+}
+
+
+/*breadcrumb*/
+.path .breadcrumb{
+    font-size: 18px;
+}
+
+
+
+                    /*--------------------------------home page--------------------------------------*/
+
+/*intro*/
+.intro .carousel .carousel-inner .carousel-1{
+    background-image: url(../../imgs/header1-ltr.jpg);
+    background-position: right;
+}
+
+.intro .carousel .carousel-inner .carousel-2{
+    background-image: url(../../imgs/header1-ltr.jpg);
+    background-position: right;
+}
+
+.intro .carousel .carousel-inner .carousel-3{
+    background-image: url(../../imgs/header1-ltr.jpg);
+    background-position: right;
+}
+
+
+/*about*/
+.about {
+    background: url(../../imgs/about2-ltr.png) no-repeat;
+    background-size: cover;
+    background-position: right;
+}
+
+
+/*articles*/
+.articles .head-text{
+    padding-left: 0;
+    padding-right: 30px;
+}
+
+.articles .view .articles-carousel .owl-nav{
+    right: 0;
+    left: auto;
+}
+
+.articles .view .articles-carousel .card .favourite i{
+    left: auto;
+    right: 6px;
+}
+
+.articles .view .articles-carousel .card .card-body p{
+    font-size: 18px;
+}
+
+
+/*requests*/
+.requests .head-text{
+    width: 250px;
+}
+
+.requests .content .filter  .form-group .inside-select .form-control{
+    padding: 0;
+    padding-left: 25px;
+}
+
+.requests .content .filter .form-group .inside-select i{
+    left: auto;
+    right: 25px;
+    border-right: none;
+    padding-right: 0;
+    border-left: 1px solid #eaeaea;
+    padding-left: 20px;
+}
+
+.requests .content .patients .details{
+    padding: 8px;
+    padding-left: none;
+    padding-right: 40px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.requests .content .patients .details ul{
+    margin-right: auto;
+    margin-left: 70px;
+    font-weight: 600;
+}
+
+
+/*contact*/
+.contact{
+    background-image: url(../../imgs/call-ltr.jpg);
+    background-position: right;
+}
+
+
+
+                /*--------------------------------create account page--------------------------------------*/
+
+.create .form .account-form form .create-btn a{
+    font-weight: 600;
+}
+
+
+
+                /*--------------------------------signin account page--------------------------------------*/
+
+.signin-account .form .signin-form form .options .forgot img{
+    margin-left: 0;
+    margin-right: 10px;
+}
+
+.signin-account .form .signin-form form .options .remember .form-check .form-check-label{
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+
+
+                /*--------------------------------article details page--------------------------------------*/
+
+.article-details .inside-article .text{
+    font-weight: 600;
+}
+
+
+
+                /*--------------------------------who are us page--------------------------------------*/
+
+.who-are-us .about-us .details .text p{
+    font-weight: 600;
+}
+
+
+
+
+/* media */
+@media screen and (max-width: 1024px){
+    /*------home page------*/
+    .upper-bar .info .e-mail{
+        margin: 0;
+    }
+    .nav-bar .navbar .navbar-brand{
+        width: 140px;
+    }
+
+    .nav-bar .navbar .accounts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-bar .navbar .accounts .create{
+        margin-left: 0;
+        margin-bottom: 15px;
+    }
+
+    .intro .carousel .carousel-inner .carousel-item{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .contact{
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .upper-bar .language,
+    .upper-bar .social{
+        display: flex;
+        align-items: center;
+        justify-content: center;  
+        margin-bottom: 20px;  
+    }
+
+    .upper-bar .info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro .carousel .carousel-inner .carousel-item{
+        background-image: url(../../imgs/BG1.jpg) !important;
+    }
+
+    .intro .carousel .carousel-inner .carousel-item .info{
+        text-align: center;
+    }
+
+    .about{
+        background: url(../../imgs/about3.jpg);
+    }
+
+    .about p {
+        color: #FFF;
+    }
+
+    .requests .content .filter {
+        padding: 0;
+    }
+
+    .requests .content .patients .details{
+        justify-content: space-between;
+    }
+
+    .requests .content .patients .details ul{
+        line-height: 2;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .requests .content .patients .details a{
+        padding: 20px 40px;
+    }
+
+    .app .info p {
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .contact .text {
+        font-size: 16px;
+    }
+
+    .contact .whatsapp a{
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    .contact .whatsapp img {
+        left: -65px;
+        width: 90px;
+    }
+
+    .footer .pages .list-group {
+        display: block;
+    }
+
+    .footer .details p {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .footer .other .social .icons a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 425px){
+    .nav-bar .navbar{
+        padding: 10px;
+    }
+
+    .requests .content .filter{
+        text-align: center;
+    }
+
+    .requests .content .filter >*:not(:last-child){
+        margin-bottom: 20px;
+    }
+
+    .requests .content .patients .details{
+        flex-direction: column;
+        border-top-right-radius: 200px;
+        border-bottom-right-radius: 0;
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 0;
+        padding-left: 0;
+        padding: 8px;
+        width: max-content;
+    }
+
+    .requests .content .patients .details .blood-type{
+        width: 220px;
+        height: 220px;
+    }
+
+    .requests .content .patients .details ul{
+        margin: 30px 0;
+        max-width: fit-content;
+    }
+
+    .app .info{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .footer .details,
+    .footer .pages,
+    .footer .stores,
+    .footer .other .social{
+        text-align: center;
+    }
+
+    .footer .other .rights {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .details,
+    .footer .pages,
+    .footer .stores{
+        margin-bottom: 30px;
+    }
+
+    .footer .stores .availabe {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+    }
+    
+    .upper-bar .info, .upper-bar .accounts{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 320px){
+    
+    .contact .whatsapp{
+        padding: 20px 30px;
+    }
+
+    .contact .whatsapp img {
+        left: -50px;
+        width: 75px;
+        bottom: -10px;
+    }
+
+    .footer .other .rights p{
+        text-align: center;
+    }
+
+    .upper-bar .info{
+        flex-direction: column;
+    }
+}

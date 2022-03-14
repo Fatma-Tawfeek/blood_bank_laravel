@@ -17,8 +17,9 @@ class CreateClientsTable extends Migration {
 			$table->date('d_o_b');
 			$table->date('last_donation_date');
 			$table->string('pin_code')->nullable();
-			$table->integer('blood_type_id')->unsigned();
-			$table->integer('city_id')->unsigned();
+			$table->integer('blood_type_id')->unsigned()->onDelete('cascade');
+			$table->integer('city_id')->unsigned()->onDelete('cascade');
+            $table->integer('status')->default(1);
             $table->string('api_token', 60)->unique()->nullable();
 		});
 	}

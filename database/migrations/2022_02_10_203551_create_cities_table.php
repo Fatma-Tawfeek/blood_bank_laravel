@@ -11,7 +11,7 @@ class CreateCitiesTable extends Migration {
 			$table->increments('id');
 			$table->timestamps();
 			$table->string('name');
-			$table->integer('governorate_id')->unsigned();
+			$table->integer('governorate_id')->unsigned()->onDelete('cascade');
 		});
 	}
 

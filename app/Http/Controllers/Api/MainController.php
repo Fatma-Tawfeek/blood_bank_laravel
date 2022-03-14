@@ -11,6 +11,7 @@ use App\Models\Category;
 use App\Models\BloodType;
 use App\Models\Governorate;
 use Illuminate\Http\Request;
+use App\Models\DonationRequest;
 use App\Http\Controllers\Controller;
 
 class MainController extends Controller
@@ -141,5 +142,15 @@ class MainController extends Controller
             }
         }
         return responseJson(1, 'تم الاضافة بنجاح', compact('donationRequest'));
+    }
+
+    public function donationRequests(Request $request) {
+        $donationRequests = DonationRequest::with(['bloodType', 'city.governorate'])->paginate(20);
+        return responseJson(1, 'success', $donationRequests);
+    }
+
+    public function donationRequest(Request $request) {
+        $donationRequest = DonationRequest::find($request->id);
+        return responseJson(1, 'success', $donationRequest);
     }
 }

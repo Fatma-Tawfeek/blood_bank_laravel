@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Mail;
 class AuthController extends Controller
 {
     public function register(Request $request) {
+
         $validator = validator()->make($request->all(), [
             'name' => 'required',
             'email' => 'required|unique:clients',
@@ -154,16 +155,6 @@ class AuthController extends Controller
         }
 
         $loginUser->save();
-
-        if ($request->has('governorate_id')) {
-            $loginUser->governorates()->detach($loginUser->city->governorate_id);
-            $loginUser->governorates()->attach($request->governorate_id);
-        }
-
-        if ($request->has('blood_type_id')) {
-            $loginUser->bloodTypes()->detach($loginUser->bloodType->blood_type_id);
-            $loginUser->bloodTypes()->attach($request->blood_type_id);
-        }
 
         $data = [
             'user' => $request->user()->fresh()->load('governorates','bloodTypes')

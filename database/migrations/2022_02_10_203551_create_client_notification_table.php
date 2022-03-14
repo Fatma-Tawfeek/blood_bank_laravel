@@ -12,7 +12,7 @@ class CreateClientNotificationTable extends Migration {
 			$table->timestamps();
 			$table->integer('client_id')->unsigned();
 			$table->integer('notification_id')->unsigned();
-			$table->boolean('is_read')->nullable();
+			$table->boolean('is_read')->default(0);
 		});
 	}
 
