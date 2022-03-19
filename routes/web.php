@@ -51,7 +51,7 @@ Route::group(['namespace' => 'front'], function() {
 });
 
 
-Route::middleware('auth')->group(function () {
+Route::middleware(['auth', 'auto-check-permission'])->group(function () {
 
     Route::get('home', [HomeController::class, 'index'])->name('dashboard');
 
